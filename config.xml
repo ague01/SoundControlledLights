@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration for="gestioneLuci">
+
+  <Paths>
+    <!--Abspath relativa da posizione del file gestione_luci.py-->
+    <!--Name non necessariamente uguale a quello reale della cartella-->
+    <MusicFolder name="musica1" type="mp3" path=".\musica"/>
+  </Paths>
+
+  <AudioRange>
+    <Scale value="0.00060"/>
+    <SubValue value="20"/>
+    <MinThreshold value="0"/>
+    <Red start="0" finish="6"/>
+    <Green start="6" finish="25"/>
+    <Blue start="25" finish="1000"/>
+  </AudioRange>
+
+  <Devices>
+    <!-- Nome per identificare il gateway dmx512 -->
+    <Gateway name="gateway1" address="192.168.16.139" port="10000" firstChannel="000">
+      <!-- firstChannel inserire 3 cifre decimali -->
+      <!-- Nome per identificare la lampada -->
+      <!-- le luci possono anche essere non in ordine -->
+      <!-- se c'è una posizione mancante viene eseguito lo shift delle
+           luci successive in quanto fisicamente non può esistere -->
+      <!-- Il valore di min e max lum deve essere in un reange tra 0 e 1 compresi.
+           Dove 0 è il minore valore di luminosità possibile -> luce spenta
+                1 è il masimo valore di luminosità possibile -> luce accesa al massimo-->
+      <Light name="lampada0" type="RGB" minlum="0" maxlum="1" position="0"/>
+      <Light name="lampada1" type="RGB" minlum="0" maxlum="1" position="1"/>
+      <Light name="lampada2" type="RGB" minlum="0" maxlum="1" position="2"/>
+      <Light name="lampada3" type="RGB" minlum="0" maxlum="1" position="3"/>
+      <Light name="lampada4" type="RGB" minlum="0" maxlum="1" position="4"/>
+      <Light name="lampada5" type="RGB" minlum="0" maxlum="1" position="5"/>
+      <Light name="lampada6" type="RGB" minlum="0" maxlum="1" position="6"/>
+      <Light name="lampada7" type="RGB" minlum="0" maxlum="1" position="7"/>
+      <Light name="lampada8" type="RGB" minlum="0" maxlum="1" position="8"/>
+      <Light name="lampada9" type="RGB" minlum="0" maxlum="1" position="10"/>
+    </Gateway>
+  </Devices>
+
+</Configuration>
